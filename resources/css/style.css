@@ -4,12 +4,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 html {
-  font-family: "Montserrat", "Arial", sans-serif;
-}
+  font-family: 'Montserrat', 'Arial', sans-serif; }
 
 /* -------------------------------------------- */
 /* ----------- REUSABLE COMPONENTS ------------ */
@@ -18,7 +17,35 @@ html {
 /* ----------------- HEADER ------------------- */
 /* -------------------------------------------- */
 .nav-bg-gradient {
-  background: radial-gradient(circle, black 22%, rgba(75, 75, 75, 0) 75%, rgba(255, 255, 255, 0) 100%);
-}
+  background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 0.6) 22%, rgba(75, 75, 75, 0) 102%, black 100%);
+  background: -o-radial-gradient(circle, rgba(0, 0, 0, 0.6) 22%, rgba(75, 75, 75, 0) 102%, black 100%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 22%, rgba(75, 75, 75, 0) 102%, black 100%); }
 
-/*# sourceMappingURL=style.css.map */
+.brand-logo {
+  font-weight: 100; }
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.8))), url(img/header-background.jpg);
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)), url(img/header-background.jpg);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)), url(img/header-background.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)), url(img/header-background.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  height: 100vh; }
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(10%, -50%);
+  -ms-transform: translate(10%, -50%);
+  transform: translate(10%, -50%); }
+
+.jajco {
+  background-color: rgba(0, 0, 0, 0.58); }
+
+ion-icon {
+  margin: 7px 0 -15px 0;
+  font-size: 40px; }

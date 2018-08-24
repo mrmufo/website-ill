@@ -1,0 +1,4 @@
+# Ignore eslintrc node_modules folder
+/node_modules/*
+/vendors/sass/components/*
+prepros-6.config
