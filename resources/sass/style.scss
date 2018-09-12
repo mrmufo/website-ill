@@ -19,9 +19,27 @@ html {
 /* ----------------- HEADER ------------------- */
 /* -------------------------------------------- */
 
-
+/*
 .nav-bg-gradient {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 22%, rgba(75,75,75,0) 102%, rgba(0, 0, 0, 1) 100%);
+}*/
+
+.main-nav {
+// ZAPYTAĆ: Jak zmniejszyć odstęp linii od tekstu?
+    li a:link,
+    li a:visited {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 100%;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom 0.25s;
+    }
+    
+    li a:hover,
+    li a:active {
+        border-bottom: 1px solid #fff;
+    }
 }
 
 .brand-logo {
@@ -31,6 +49,7 @@ html {
 header {
     height: 100vh;
     width: 100%;
+    background-color: #030303;
 }
 
 .header-bg {
@@ -38,16 +57,21 @@ header {
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
-    height: 100vh;
-    width: 100%;
+    height: 100%;
+    width: 80%;
 }
-
+/*
 .hero-text-box {
     position: absolute;
     width: 1140px;
     top: 50%;
     left: 50%;
     transform: translate(10%, -50%);
+}*/
+
+.card-panel img {
+    width: 400px;
+    height: auto;
 }
 
 .card-panel-bg {

@@ -16,17 +16,32 @@ html {
 /* -------------------------------------------- */
 /* ----------------- HEADER ------------------- */
 /* -------------------------------------------- */
+/*
 .nav-bg-gradient {
-  background: -webkit-radial-gradient(circle, rgba(0, 0, 0, 0.6) 22%, rgba(75, 75, 75, 0) 102%, black 100%);
-  background: -o-radial-gradient(circle, rgba(0, 0, 0, 0.6) 22%, rgba(75, 75, 75, 0) 102%, black 100%);
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 22%, rgba(75, 75, 75, 0) 102%, black 100%); }
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 22%, rgba(75,75,75,0) 102%, rgba(0, 0, 0, 1) 100%);
+}*/
+.main-nav li a:link,
+.main-nav li a:visited {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 100%;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: border-bottom 0.25s;
+  -o-transition: border-bottom 0.25s;
+  transition: border-bottom 0.25s; }
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 1px solid #fff; }
 
 .brand-logo {
   font-weight: 100; }
 
 header {
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+  background-color: #030303; }
 
 .header-bg {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.8))), url(img/header-background.jpg);
@@ -36,17 +51,20 @@ header {
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
-  height: 100vh;
-  width: 100%; }
+  height: 100%;
+  width: 80%; }
 
+/*
 .hero-text-box {
-  position: absolute;
-  width: 1140px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(10%, -50%);
-  -ms-transform: translate(10%, -50%);
-  transform: translate(10%, -50%); }
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%, -50%);
+}*/
+.card-panel img {
+  width: 400px;
+  height: auto; }
 
 .card-panel-bg {
   background-color: rgba(0, 0, 0, 0.58); }
