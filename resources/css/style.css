@@ -1,6 +1,8 @@
 /* -------------------------------------------- */
 /* --------------- BASIC SETUP ---------------- */
 /* -------------------------------------------- */
+/* ---------------- VARIABLES ----------------- */
+/* ----------------- GENERAL ------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +12,18 @@
 html {
   font-family: 'Montserrat', 'Arial', sans-serif; }
 
+.row {
+  max-width: 1200px; }
+
 /* -------------------------------------------- */
 /* ----------- REUSABLE COMPONENTS ------------ */
 /* -------------------------------------------- */
+.post-left {
+  padding-left: 0; }
+
+.post-right {
+  padding-right: 0; }
+
 /* -------------------------------------------- */
 /* ----------------- HEADER ------------------- */
 /* -------------------------------------------- */
@@ -33,7 +44,7 @@ html {
 
 .main-nav li a:hover,
 .main-nav li a:active {
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px solid #ffab00; }
 
 .brand-logo {
   font-weight: 100; }
@@ -41,7 +52,7 @@ html {
 header {
   height: 100vh;
   width: 100%;
-  background-color: #030303; }
+  background-color: #171717; }
 
 .header-bg {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.8))), url(img/header-background.jpg);
