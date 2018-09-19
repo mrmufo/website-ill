@@ -5,6 +5,7 @@
 /* ---------------- VARIABLES ----------------- */
 
 $color-gold: #daa520;
+$carousel-height: 512px;
 
 /* ----------------- GENERAL ------------------ */
 
@@ -32,6 +33,12 @@ html {
 
 .post-right {
     padding-right: 0;
+}
+
+.btn-center {
+    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* -------------------------------------------- */
@@ -79,18 +86,38 @@ header {
     height: 100%;
     width: 80%;
 }
-/*
-.hero-text-box {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(10%, -50%);
-}*/
 
-.card-panel img {
-    width: 400px;
-    height: auto;
+// ZOPTYMALIZOWAC
+.celeb-photo {
+    img {
+        width: 420px;
+        display: block;
+        margin: 0 auto 10px auto;
+        border: solid black;
+        
+        transform: scale(1);
+        transition: transform 0.5s, opacity 0.5s;
+    }
+    
+    img:hover {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+}
+
+.carousel-item {
+    img {
+        display: block;
+        margin: 0 auto 10px auto;
+        border: solid black;
+        
+        transform: scale(1);
+        transition: transform 0.5s, opacity 0.5s;
+    }
+    
+    img:hover {
+        transform: scale(1.05);
+    }
 }
 
 .card-panel-bg {

@@ -8418,7 +8418,7 @@ input[type=range]::-ms-thumb {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 512px;
   -webkit-perspective: 500px;
   perspective: 500px;
   -webkit-transform-style: preserve-3d;
@@ -8448,7 +8448,7 @@ input[type=range]::-ms-thumb {
 .carousel.carousel-slider .carousel-item {
   width: 100%;
   height: 100%;
-  min-height: 400px;
+  min-height: 512px;
   position: absolute;
   top: 0;
   left: 0;
@@ -8467,7 +8467,7 @@ input[type=range]::-ms-thumb {
 .carousel .carousel-item {
   visibility: hidden;
   width: 200px;
-  height: 200px;
+  height: 256px;
   position: absolute;
   top: 0;
   left: 0;
@@ -9122,3 +9122,5 @@ input[type=range]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
+
+/*# sourceMappingURL=materialize.css.map */

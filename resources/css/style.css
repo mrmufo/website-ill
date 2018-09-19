@@ -24,6 +24,10 @@ html {
 .post-right {
   padding-right: 0; }
 
+.btn-center {
+  margin-left: auto;
+  margin-right: auto; }
+
 /* -------------------------------------------- */
 /* ----------------- HEADER ------------------- */
 /* -------------------------------------------- */
@@ -65,17 +69,43 @@ header {
   height: 100%;
   width: 80%; }
 
-/*
-.hero-text-box {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(10%, -50%);
-}*/
-.card-panel img {
-  width: 400px;
-  height: auto; }
+.celeb-photo img {
+  width: 420px;
+  display: block;
+  margin: 0 auto 10px auto;
+  border: solid black;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; }
+
+.celeb-photo img:hover {
+  opacity: 0.7;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+
+.carousel-item img {
+  display: block;
+  margin: 0 auto 10px auto;
+  border: solid black;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  -o-transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; }
+
+.carousel-item img:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05); }
 
 .card-panel-bg {
   background-color: rgba(0, 0, 0, 0.58); }
