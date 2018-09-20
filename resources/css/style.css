@@ -13,7 +13,43 @@ html {
   font-family: 'Montserrat', 'Arial', sans-serif; }
 
 .row {
-  max-width: 1200px; }
+  max-width: 1900px; }
+
+/* ---------------- KEYFRAMES ----------------- */
+@-webkit-keyframes slidein-insane {
+  0% {
+    margin-left: 100%; }
+  50% {
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    margin-left: -97%; }
+  100% { } }
+@keyframes slidein-insane {
+  0% {
+    margin-left: 100%; }
+  50% {
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    margin-left: -97%; }
+  100% { } }
+
+@-webkit-keyframes slidein-luxury {
+  0% {
+    margin-left: 100%; }
+  50% {
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    margin-left: 0%; }
+  100% { } }
+
+@keyframes slidein-luxury {
+  0% {
+    margin-left: 100%; }
+  50% {
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    margin-left: 0%; }
+  100% { } }
 
 /* -------------------------------------------- */
 /* ----------- REUSABLE COMPONENTS ------------ */
@@ -56,18 +92,32 @@ html {
 header {
   height: 100vh;
   width: 100%;
-  background-color: #000000; }
-
-.header-bg {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.85)), to(rgba(0, 0, 0, 0.8))), url(img/header-background.jpg);
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)), url(img/header-background.jpg);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)), url(img/header-background.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)), url(img/header-background.jpg);
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  height: 100%;
-  width: 80%; }
+  background-color: #000000;
+  overflow: hidden; }
+  header .sliding-insane {
+    position: relative;
+    top: 150px;
+    margin-left: -94%;
+    font-size: 3000%;
+    color: rgba(255, 171, 0, 0.26);
+    -webkit-animation-duration: 25s;
+    animation-duration: 25s;
+    -webkit-animation-name: slidein-insane;
+    animation-name: slidein-insane;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
+  header .sliding-luxury {
+    position: relative;
+    bottom: 600px;
+    margin-left: 0%;
+    font-size: 3000%;
+    color: rgba(255, 171, 0, 0.15);
+    -webkit-animation-duration: 40s;
+    animation-duration: 40s;
+    -webkit-animation-name: slidein-luxury;
+    animation-name: slidein-luxury;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
 
 .celeb-photo img {
   width: 420px;

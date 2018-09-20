@@ -20,7 +20,38 @@ html {
 }
 
 .row {
-    max-width: 1200px;
+    max-width: 1900px;
+}
+
+/* ---------------- KEYFRAMES ----------------- */
+
+@keyframes slidein-insane {
+
+    0% {
+        margin-left: 100%; 
+    }
+    50%{
+        animation-iteration-count: 1;
+        margin-left: -97%;
+//        animation-delay: infinite;
+    }
+    100%{
+
+    }
+}
+@keyframes slidein-luxury {
+
+    0% {
+        margin-left: 100%; 
+    }
+    50%{
+        animation-iteration-count: 1;
+        margin-left: 0%;
+//        animation-delay: infinite;
+    }
+    100%{
+        
+    }
 }
 
 /* -------------------------------------------- */
@@ -51,7 +82,6 @@ html {
 }*/
 
 .main-nav {
-// ZAPYTAĆ: Jak zmniejszyć odstęp linii od tekstu?
     li a:link,
     li a:visited {
         color: #fff;
@@ -76,16 +106,40 @@ header {
     height: 100vh;
     width: 100%;
     background-color: #000000;
+    overflow:hidden;
+
+    .sliding-insane {
+        position: relative;
+        top: 150px;
+        margin-left: -94%;
+        font-size: 3000%;
+        color: rgba(255, 171, 0, 0.26);
+        animation-duration: 25s;
+        animation-name: slidein-insane;
+        animation-iteration-count: 1;
+    }
+    
+    .sliding-luxury {
+// Napis LUXURY opada ze scrollem na dół, przy końcu sekcji opacity=0 i pojawia się ciemno-złoty w miejscu logo
+        position: relative;
+        bottom: 600px;
+        margin-left: 0%;
+        font-size: 3000%;
+        color: rgba(255, 171, 0, 0.15);
+        animation-duration: 40s;
+        animation-name: slidein-luxury;
+        animation-iteration-count: 1;
+    }
 }
 
-.header-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)), url(img/header-background.jpg);
-    background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
-    height: 100%;
-    width: 80%;
-}
+//.header-bg {
+//    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)), url(img/header-background.jpg);
+//    background-size: cover;
+//    background-position: top;
+//    background-attachment: fixed;
+//    height: 100%;
+//    width: 80%;
+//}
 
 // ZOPTYMALIZOWAC
 .celeb-photo {
