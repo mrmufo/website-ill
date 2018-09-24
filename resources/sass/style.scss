@@ -28,29 +28,20 @@ html {
 @keyframes slidein-insane {
 
     0% {
-        margin-left: 100%; 
-    }
-    50%{
-        animation-iteration-count: 1;
-        margin-left: -97%;
-//        animation-delay: infinite;
+        transform: translateX(100%); 
     }
     100%{
-
+        animation-iteration-count: 1;
+        transform: translateX(-97%);
     }
 }
 @keyframes slidein-luxury {
 
     0% {
-        margin-left: 100%; 
-    }
-    50%{
-        animation-iteration-count: 1;
-        margin-left: 0%;
-//        animation-delay: infinite;
+        transform: translateX(100%);
     }
     100%{
-        
+        transform: translateX(0);
     }
 }
 
@@ -114,9 +105,9 @@ header {
         margin-left: -94%;
         font-size: 3000%;
         color: rgba(255, 171, 0, 0.26);
-        animation-duration: 25s;
+        animation-duration: 10s;
         animation-name: slidein-insane;
-        animation-iteration-count: 1;
+        animation-iteration-count: infinite;
     }
     
     .sliding-luxury {
@@ -128,7 +119,11 @@ header {
         color: rgba(255, 171, 0, 0.15);
         animation-duration: 40s;
         animation-name: slidein-luxury;
-        animation-iteration-count: 1;
+        animation-iteration-count: infinite;
+        
+        &:after {
+            
+        }
     }
 }
 
