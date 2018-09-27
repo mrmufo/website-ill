@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems, {
-    indicators: true
+        indicators: true
     });
 });
 $(document).ready(function() {
-    var mmm = 5;
     var intervalID;
     function changeColor() {
         intervalID = window.setInterval(getValues, 100);
@@ -18,6 +17,7 @@ $(document).ready(function() {
         console.log(x);
         if(x < 0) {
             $("#logo-I").css("color", "#ffab00");
+            stopTextColor();
         }
     };
     
@@ -25,6 +25,12 @@ $(document).ready(function() {
         clearInterval(intervalID);
     };
     
-    
+  
     changeColor();
-})
+    
+    $('.sliding-insane').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(e) { $(this).remove(); });
+
+    
+//    var myBox = document.getElementById('sliding-insane');
+//    myBox.addEventListener('webkitAnimationEnd', function( event ) { myBox.style.display = 'none'; }, false);
+});
