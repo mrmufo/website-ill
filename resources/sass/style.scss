@@ -28,23 +28,22 @@ html {
 @keyframes slidein-insane {
 
     0% {
-        transform: translateX(100%); 
-    }
-    99% {
-        opacity: 1;
+        transform: translateX(0%); 
     }
     100%{
-        opacity: 0;
-        transform: translateX(-150%);
+        transform: translateX(-210%);
     }
 }
 @keyframes slidein-luxury {
 
     0% {
+        opacity: 1;
         transform: translateX(100%);
     }
     100%{
-        transform: translateX(0);
+        opacity: 1;
+        transform: translateX(-190%);
+        
     }
 }
 
@@ -104,28 +103,34 @@ header {
     overflow:hidden;
 
     .sliding-insane {
-        animation-duration: 10s;
+        animation-delay: 1s;
+        animation-duration: 18s;
         animation-name: slidein-insane;
         animation-iteration-count: 1;
         
         h1 {
+            margin-left: 50px;
             position: absolute;
-            font-size: 2000%;
+            font-size: 4000%;
             color: rgba(255, 171, 0, 0.26);
         }
     }
     
     .sliding-luxury {
 // Napis LUXURY opada ze scrollem na dół, przy końcu sekcji opacity=0 i pojawia się ciemno-złoty w miejscu logo
-        animation-duration: 40s;
+        opacity: 0;
+        animation-delay: 3s;
+        animation-duration: 60s;
         animation-name: slidein-luxury;
         animation-iteration-count: infinite;
-        margin-left: 0%;
+        -webkit-font-smoothing: antialiased;
+        margin-left: 0;
         h1 {
-            margin-left: auto;
-            margin-right: auto;
+//            margin-left: auto;
+//            margin-right: auto;
+            margin-top: 0;
             position: absolute;
-            font-size: 2000%;
+            font-size: 4000%;
             color: rgba(255, 171, 0, 0.15);
         }
         

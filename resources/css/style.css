@@ -18,40 +18,38 @@ html {
 /* ---------------- KEYFRAMES ----------------- */
 @-webkit-keyframes slidein-insane {
   0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%); }
-  99% {
-    opacity: 1; }
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); }
   100% {
-    opacity: 0;
-    -webkit-transform: translateX(-150%);
-    transform: translateX(-150%); } }
+    -webkit-transform: translateX(-210%);
+    transform: translateX(-210%); } }
 @keyframes slidein-insane {
   0% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%); }
-  99% {
-    opacity: 1; }
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); }
   100% {
-    opacity: 0;
-    -webkit-transform: translateX(-150%);
-    transform: translateX(-150%); } }
+    -webkit-transform: translateX(-210%);
+    transform: translateX(-210%); } }
 
 @-webkit-keyframes slidein-luxury {
   0% {
+    opacity: 1;
     -webkit-transform: translateX(100%);
     transform: translateX(100%); }
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0); } }
+    opacity: 1;
+    -webkit-transform: translateX(-190%);
+    transform: translateX(-190%); } }
 
 @keyframes slidein-luxury {
   0% {
+    opacity: 1;
     -webkit-transform: translateX(100%);
     transform: translateX(100%); }
   100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0); } }
+    opacity: 1;
+    -webkit-transform: translateX(-190%);
+    transform: translateX(-190%); } }
 
 /* -------------------------------------------- */
 /* ----------- REUSABLE COMPONENTS ------------ */
@@ -100,29 +98,35 @@ header {
   background-size: cover;
   overflow: hidden; }
   header .sliding-insane {
-    -webkit-animation-duration: 10s;
-    animation-duration: 10s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 18s;
+    animation-duration: 18s;
     -webkit-animation-name: slidein-insane;
     animation-name: slidein-insane;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1; }
     header .sliding-insane h1 {
+      margin-left: 50px;
       position: absolute;
-      font-size: 2000%;
+      font-size: 4000%;
       color: rgba(255, 171, 0, 0.26); }
   header .sliding-luxury {
-    -webkit-animation-duration: 40s;
-    animation-duration: 40s;
+    opacity: 0;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkit-animation-duration: 60s;
+    animation-duration: 60s;
     -webkit-animation-name: slidein-luxury;
     animation-name: slidein-luxury;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-    margin-left: 0%; }
+    -webkit-font-smoothing: antialiased;
+    margin-left: 0; }
     header .sliding-luxury h1 {
-      margin-left: auto;
-      margin-right: auto;
+      margin-top: 0;
       position: absolute;
-      font-size: 2000%;
+      font-size: 4000%;
       color: rgba(255, 171, 0, 0.15); }
 
 .celeb-photo img {
