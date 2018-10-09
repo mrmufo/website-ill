@@ -42,7 +42,7 @@ html {
     }
     100%{
         opacity: 1;
-        transform: translateX(-190%);
+        transform: translateX(-115%);
         
     }
 }
@@ -95,6 +95,10 @@ html {
     font-weight: 100;
 }
 
+.sliding {
+    font-family: 'Source Code Pro', 'Arial', monospace;
+}
+
 header {
     background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.8)), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
     height: 100vh;
@@ -102,11 +106,13 @@ header {
 //    width: 100%;
     overflow:hidden;
 
-    .sliding-insane {
+    #sliding-insane {
         animation-delay: 1s;
         animation-duration: 18s;
         animation-name: slidein-insane;
         animation-iteration-count: 1;
+        -webkit-font-smoothing: antialiased;
+        white-space: nowrap;
         
         h1 {
             margin-left: 50px;
@@ -116,10 +122,10 @@ header {
         }
     }
     
-    .sliding-luxury {
+    #sliding-luxury {
 // Napis LUXURY opada ze scrollem na dół, przy końcu sekcji opacity=0 i pojawia się ciemno-złoty w miejscu logo
         opacity: 0;
-        animation-delay: 3s;
+        animation-delay: 0;
         animation-duration: 60s;
         animation-name: slidein-luxury;
         animation-iteration-count: infinite;

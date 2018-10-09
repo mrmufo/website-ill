@@ -38,8 +38,8 @@ html {
     transform: translateX(100%); }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(-190%);
-    transform: translateX(-190%); } }
+    -webkit-transform: translateX(-115%);
+    transform: translateX(-115%); } }
 
 @keyframes slidein-luxury {
   0% {
@@ -48,8 +48,8 @@ html {
     transform: translateX(100%); }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(-190%);
-    transform: translateX(-190%); } }
+    -webkit-transform: translateX(-115%);
+    transform: translateX(-115%); } }
 
 /* -------------------------------------------- */
 /* ----------- REUSABLE COMPONENTS ------------ */
@@ -89,6 +89,9 @@ html {
 .brand-logo {
   font-weight: 100; }
 
+.sliding {
+  font-family: 'Source Code Pro', 'Arial', monospace; }
+
 header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.8))), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
   background-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
@@ -97,7 +100,7 @@ header {
   height: 100vh;
   background-size: cover;
   overflow: hidden; }
-  header .sliding-insane {
+  header #sliding-insane {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
     -webkit-animation-duration: 18s;
@@ -105,16 +108,18 @@ header {
     -webkit-animation-name: slidein-insane;
     animation-name: slidein-insane;
     -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1; }
-    header .sliding-insane h1 {
+    animation-iteration-count: 1;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap; }
+    header #sliding-insane h1 {
       margin-left: 50px;
       position: absolute;
       font-size: 4000%;
       color: rgba(255, 171, 0, 0.26); }
-  header .sliding-luxury {
+  header #sliding-luxury {
     opacity: 0;
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
     -webkit-animation-duration: 60s;
     animation-duration: 60s;
     -webkit-animation-name: slidein-luxury;
@@ -123,7 +128,7 @@ header {
     animation-iteration-count: infinite;
     -webkit-font-smoothing: antialiased;
     margin-left: 0; }
-    header .sliding-luxury h1 {
+    header #sliding-luxury h1 {
       margin-top: 0;
       position: absolute;
       font-size: 4000%;

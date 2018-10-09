@@ -6,42 +6,45 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 $(document).ready(function() {
     var intervalID;
+    var letterWidth;
+    var insane = document.getElementById("sliding-insane");
+    
+    function measureLetterWidth(element, letters) {
+        return element.scrollWidth/letters;
+    };
+    
     function changeColor() {
         intervalID = window.setInterval(getValues, 100);
     };
     
     function getValues(){
-        //console.log($('.sliding-insane'));
-        var matrix = $('.sliding-insane').css('transform').replace(/[^0-9\-.,]/g, '').split(',');
-        var x = matrix[4]/window.screen.availWidth;
-        console.log(x);
-        if(x > -0.475 && x < -0.12) {
+        var matrix = $('#sliding-insane').css('transform').replace(/[^0-9\-.,]/g, '').split(',');
+        var x = matrix[4];
+        if(-2*letterWidth < x && x <= -letterWidth) {
             $("#logo-I").css("color", "#ffab00");
-        }else if(x > -0.775 && x < -0.475) {
+        }else if(-3*letterWidth < x && x <= -2*letterWidth) {
             $("#logo-N1").css("color", "#ffab00");
-        }else if(x > -1.125 && x < -0.775) {
+        }else if(-4*letterWidth < x && x <= -3*letterWidth) {
             $("#logo-S").css("color", "#ffab00");
-        }else if(x > -1.375 && x < -1.125) {
+        }else if(-5*letterWidth < x && x <= -4*letterWidth) {
             $("#logo-A").css("color", "#ffab00");
-        }else if(x > -1.735 && x < -1.375) {
+        }else if(-6*letterWidth < x && x <= -5*letterWidth) {
             $("#logo-N2").css("color", "#ffab00");
-        }else if(x < -1.735) {
+        }else if(x <= -6*letterWidth) {
             $("#logo-E").css("color", "#ffab00");
-            clearInterval(intervalID);
+            stopTextColor();
         }
-        
     };
     
     function stopTextColor() {
         clearInterval(intervalID);
     };
-    
-  
-    changeColor();
-    
-    $('.sliding-insane').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(e) { $(this).remove(); });
 
     
-//    var myBox = document.getElementById('sliding-insane');
-//    myBox.addEventListener('webkitAnimationEnd', function( event ) { myBox.style.display = 'none'; }, false);
+    letterWidth = measureLetterWidth(insane, 6);
+    changeColor();
+    
+    $('#sliding-insane').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(e) { $(this).remove(); });
+
+
 });
