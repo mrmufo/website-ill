@@ -21,7 +21,7 @@ $(document).ready(function() {
     function getValues(){
         var matrix = $('#sliding-insane').css('transform').replace(/[^0-9\-.,]/g, '').split(',');
         var x = matrix[4];
-        if(-2*letterWidth < x && x <= -letterWidth) {
+        if(-2*letterWidth < x && x <= -letterWidth)
             $("#logo-I").css({"color": "#ffab00", "opacity": "1"});
         }else if(-3*letterWidth < x && x <= -2*letterWidth) {
             $("#logo-N1").css({"color": "#ffab00", "opacity": "1"});
@@ -42,11 +42,8 @@ $(document).ready(function() {
     };
 
     
-    
     letterWidth = measureLetterWidth(insane, 6);
     changeColor();
     
     $('#sliding-insane').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(e) { $(this).remove(); });
-
-
 });
