@@ -3,9 +3,11 @@
 /* -------------------------------------------- */
 
 /* ---------------- VARIABLES ----------------- */
-
-$color-gold: #daa520;
-$carousel-height: 512px;
+:root {
+    $color-gold: #daa520;
+    $insane-width: 0px;
+    //$carousel-height: 512px;
+}
 
 /* ----------------- GENERAL ------------------ */
 
@@ -98,7 +100,10 @@ html {
 .sliding {
     font-family: 'Source Code Pro', 'Arial', monospace;
 }
-
+#logo-I, #logo-N1, #logo-S, #logo-A, #logo-N2, #logo-E {
+    opacity: 0;
+    transition: opacity 3s;
+}
 header {
     background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.8)), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
     height: 100vh;
@@ -162,7 +167,6 @@ header {
         display: block;
         margin: 0 auto 10px auto;
         border: solid black;
-        
         transform: scale(1);
         transition: transform 0.5s, opacity 0.5s;
     }

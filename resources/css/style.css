@@ -92,6 +92,12 @@ html {
 .sliding {
   font-family: 'Source Code Pro', 'Arial', monospace; }
 
+#logo-I, #logo-N1, #logo-S, #logo-A, #logo-N2, #logo-E {
+  opacity: 0;
+  -webkit-transition: opacity 3s;
+  -o-transition: opacity 3s;
+  transition: opacity 3s; }
+
 header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.8))), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
   background-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
