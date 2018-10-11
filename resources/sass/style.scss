@@ -27,27 +27,27 @@ html {
 
 /* ---------------- KEYFRAMES ----------------- */
 
-@keyframes slidein-insane {
-
-    0% {
-        transform: translateX(0%); 
-    }
-    100%{
-        transform: translateX(-210%);
-    }
-}
-@keyframes slidein-luxury {
-
-    0% {
-        opacity: 1;
-        transform: translateX(100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(-115%);
-        
-    }
-}
+//@keyframes slidein-insane {
+//
+//    0% {
+//        transform: translateX(0%); 
+//    }
+//    100%{
+//        transform: translateX(-210%);
+//    }
+//}
+//@keyframes slidein-luxury {
+//
+//    0% {
+//        opacity: 1;
+//        transform: translateX(100%);
+//    }
+//    100%{
+//        opacity: 1;
+//        transform: translateX(-115%);
+//        
+//    }
+//}
 
 /* -------------------------------------------- */
 /* ----------- REUSABLE COMPONENTS ------------ */
@@ -112,13 +112,13 @@ header {
     overflow:hidden;
 
     #sliding-insane {
-        animation-delay: 1s;
-        animation-duration: 18s;
-        animation-name: slidein-insane;
-        animation-iteration-count: 1;
-        -webkit-font-smoothing: antialiased;
-        white-space: nowrap;
-        
+//        animation-delay: 1s;
+//        animation-duration: 18s;
+//        animation-name: slidein-insane;
+//        animation-iteration-count: 1;
+//        -webkit-font-smoothing: antialiased;
+//        white-space: nowrap;
+//        
         h1 {
             margin-left: 50px;
             position: absolute;
@@ -129,13 +129,13 @@ header {
     
     #sliding-luxury {
 // Napis LUXURY opada ze scrollem na dół, przy końcu sekcji opacity=0 i pojawia się ciemno-złoty w miejscu logo
-        opacity: 0;
-        animation-delay: 0;
-        animation-duration: 60s;
-        animation-name: slidein-luxury;
-        animation-iteration-count: infinite;
-        -webkit-font-smoothing: antialiased;
-        margin-left: 0;
+//        opacity: 0;
+//        animation-delay: 0;
+//        animation-duration: 60s;
+//        animation-name: slidein-luxury;
+//        animation-iteration-count: infinite;
+//        -webkit-font-smoothing: antialiased;
+//        margin-left: 0;
         h1 {
 //            margin-left: auto;
 //            margin-right: auto;
