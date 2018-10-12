@@ -7,9 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function() {
     $.keyframe.debug = true;
     var intervalID;
-    var letterWidth;
+    var letterWidth, luxuryWidth;
     var insane = document.getElementById("sliding-insane");
+    var insane2 = $(document.getElementById('#sliding-insane'));
     var luxury = document.getElementById("sliding-luxury");
+    var shake_start = {
+                "opacity": "1",
+                "transform": "translateX(-luxuryWidth)"
+    };
+    console.log(luxuryWidth);
     
     function measureLetterWidth(element, letters) {
         return element.scrollWidth/letters;
@@ -50,7 +56,7 @@ $(document).ready(function() {
             name: "slidein-luxury",
             "0%": {
                 "opacity": "1",
-                "transform": "translateX(100%)"
+                "transform": "translateX(0%)"
             },
             "100%": {
                 "opacity": "1",
@@ -58,8 +64,11 @@ $(document).ready(function() {
             }
         }
     ]);
-
-    $(insane).playKeyframe({
+    
+    luxuryWidth = measureLetterWidth(luxury, 1);
+    console.log(luxuryWidth);
+    
+    $(insane2).playKeyframe({
         name: "slidein-insane",
         delay: "1s",
         duration: "10s",
@@ -73,6 +82,17 @@ $(document).ready(function() {
     });
     
     letterWidth = measureLetterWidth(insane, 6);
+    luxuryWidth = measureLetterWidth(luxury, 1);
+    console.log(luxury.scrollWidth);
+    console.log(luxuryWidth);
+//    $.keyframe.define([{
+//            name: "slidein-luxury",
+//            "100%": {
+//                "opacity": "1",
+//                "transformX": "translateX(-1115%)"
+//            }
+//        }
+//    ]);
     changeColor();
     
     $('#sliding-insane').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(e) { $(this).remove(); });
