@@ -55,6 +55,7 @@ html {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 22%, rgba(75,75,75,0) 102%, rgba(0, 0, 0, 1) 100%);
 }*/
 
+
 .main-nav {
     li a:link,
     li a:visited {
@@ -70,6 +71,33 @@ html {
     li a:active {
         border-bottom: 1px solid #ffab00;
     }
+}
+
+.expand {
+    z-index: 1;
+    background-color: black;
+    transition: background-color 0.25s;
+}
+
+//.navbar {
+//    top: 0;
+//    position: fixed;
+//    transition: top 0.5s;
+//}
+// .sticky {
+//    position: fixed;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    background-color: rgba(255, 255, 255, 0.98);
+//    box-shadow: 0 2px 2px #efefef;
+//    z-index: 9999;
+//}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .brand-logo {
@@ -92,6 +120,8 @@ header {
 
     #sliding-insane {     
         h1 {
+            z-index: -1;
+            top: -100px;
             margin: 0;
             left: 50px;
             position: absolute;
@@ -103,6 +133,8 @@ header {
     #sliding-luxury {
 // Napis LUXURY opada ze scrollem na dół, przy końcu sekcji opacity=0 i pojawia się ciemno-złoty w miejscu logo
         h1 {
+            z-index: 0;
+            top: -100px;
             margin: 0;
             left: 100%;
             position: absolute;

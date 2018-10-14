@@ -50,6 +50,18 @@ html {
 .main-nav li a:active {
   border-bottom: 1px solid #ffab00; }
 
+.expand {
+  z-index: 1;
+  background-color: black;
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
 .brand-logo {
   font-weight: 100; }
 
@@ -72,12 +84,16 @@ header {
   background-attachment: fixed;
   overflow: hidden; }
   header #sliding-insane h1 {
+    z-index: -1;
+    top: -100px;
     margin: 0;
     left: 50px;
     position: absolute;
     font-size: 4000%;
     color: rgba(255, 171, 0, 0.26); }
   header #sliding-luxury h1 {
+    z-index: 0;
+    top: -100px;
     margin: 0;
     left: 100%;
     position: absolute;

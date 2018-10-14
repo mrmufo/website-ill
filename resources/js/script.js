@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 })
 $(document).ready(function() {
+    window.onscroll = function() {myFunction()};
+    document.getElementById('navbar').onscroll = function() {
+        console.log("scrolling");
+    };
 //    let dupa = '123'
 //    console.log(`dupa jasia ${dupa}`)
 //    
@@ -31,6 +35,35 @@ $(document).ready(function() {
 //                "opacity": "1",
 //                "transform": "translateX(-luxuryWidth)"
 //    }
+    
+    $(window).on('scroll', function () {
+    if ($(this).scrollTop() > 200) {
+        if (!$('#navbar').hasClass('expand')) {
+            $('#navbar').addClass('expand');
+        }
+    } else {
+        if ($('#navbar').hasClass('expand')) {
+            $('#navbar').removeClass('expand');
+        }
+    }
+});
+    
+    var navbar = document.getElementById("navbar");
+// navbar.onscroll = function() {
+////        console.log("scrolling");
+////    };
+        
+    var sticky = navbar.offsetTop;
+    
+    
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
     
     function measureLetterWidth(element, letters) {
         return element.scrollWidth/letters
@@ -96,6 +129,24 @@ $(document).ready(function() {
         timingFunction: 'linear'
     })
 /* -------------------------------------------- */
+   
+///* For sticky navigation */
+//    $('.js--section-sliding-text').waypoint(function(direction) {
+//        if (direction == "down") {
+//            $('main-nav').addClass('sticky');
+//        } else {
+//            $('main-nav').removeClass('sticky');           
+//        }   
+//    }, {
+//        offset: '60px'
+//    });
+    
+//    var waypoint = new Waypoint({
+//  element: document.getElementById('waypoint'),
+//  handler: function(direction) {
+//    console.log('Scrolled to waypoint!')
+//  }
+//})
     
     console.log(-window.screen.width)
     letterWidth = measureLetterWidth(elInsane, 6)
