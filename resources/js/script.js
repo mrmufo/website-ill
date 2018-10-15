@@ -5,10 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 })
 $(document).ready(function() {
-    window.onscroll = function() {myFunction()};
-    document.getElementById('navbar').onscroll = function() {
-        console.log("scrolling");
-    };
+    $.keyframe.debug = true
 //    let dupa = '123'
 //    console.log(`dupa jasia ${dupa}`)
 //    
@@ -24,47 +21,39 @@ $(document).ready(function() {
 //    
 //    console.log(dupa_2.event(1))
     
-    $.keyframe.debug = true
-    var intervalID
-    var letterWidth, elLuxuryWidth, elInsaneWidth
-    var elInsane = document.getElementById("js-insane")
-    var elLuxury = document.getElementById('js-luxury')
-    var insane = document.getElementById("sliding-insane")
-    var luxury = document.getElementById("sliding-luxury")
+/* ----------------- VARIABLES ---------------- */
+    var intervalID, letterWidth, elLuxuryWidth, elInsaneWidth
+    var elInsane = $('#js-insane')[0]
+    var elLuxury = $('#js-luxury')[0]
+    var insane = $('#sliding-insane')[0]
+    var luxury = $('#sliding-luxury')[0]
 //    var shake_start = {
 //                "opacity": "1",
 //                "transform": "translateX(-luxuryWidth)"
 //    }
+
+/* -------------- NAVIGATION BAR -------------- */
+    var navbar = $('#navbar')[0]
+    var sticky = $('#navbar').offset().top;
     
     $(window).on('scroll', function () {
-    if ($(this).scrollTop() > 200) {
-        if (!$('#navbar').hasClass('expand')) {
-            $('#navbar').addClass('expand');
+        if ($(this).scrollTop() >= sticky) {
+            $('#navbar').addClass('sticky');
+        } else {
+            $('#navbar').removeClass('sticky');
         }
-    } else {
-        if ($('#navbar').hasClass('expand')) {
-            $('#navbar').removeClass('expand');
+        if ($(this).scrollTop() > 200) {
+            if (!$('#navbar').hasClass('expand')) {
+                $('#navbar').addClass('expand');
+            }
+        } else {
+            if ($('#navbar').hasClass('expand')) {
+                $('#navbar').removeClass('expand');
+            }
         }
-    }
 });
-    
-    var navbar = document.getElementById("navbar");
-// navbar.onscroll = function() {
-////        console.log("scrolling");
-////    };
-        
-    var sticky = navbar.offsetTop;
-    
-    
-    
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-    
+/* -------------------------------------------- */
+
     function measureLetterWidth(element, letters) {
         return element.scrollWidth/letters
     }
