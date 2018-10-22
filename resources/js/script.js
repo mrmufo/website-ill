@@ -27,6 +27,11 @@ $(document).ready(function() {
     var elLuxury = $('#js-luxury')[0]
     var insane = $('#sliding-insane')[0]
     var luxury = $('#sliding-luxury')[0]
+    var $newSpanLogoN1 = $("<span class='logo-N1'>n</span>")
+    var $newSpanLogoS = $("<span class='logo-S'>s</span>")
+    var $newSpanLogoA = $("<span class='logo-A'>a</span>")
+    var $newSpanLogoN2 = $("<span class='logo-N2'>n</span>")
+    var $newSpanLogoE = $("<span class='logo-E'>e</span>")
 //    var shake_start = {
 //                "opacity": "1",
 //                "transform": "translateX(-luxuryWidth)"
@@ -66,17 +71,22 @@ $(document).ready(function() {
         var matrix = $('#sliding-insane').css('transform').replace(/[^0-9\-.,]/g, '').split(',')
         var x = matrix[4]
         if(-2*letterWidth < x && x <= -letterWidth) {
-            $("#logo-I").css({"color": "#ffab00", "opacity": "1"})
+            $(".logo-I").css({"color": "#ffab00", 'transition': 'color 3s'})
         }else if(-3*letterWidth < x && x <= -2*letterWidth) {
-            $("#logo-N1").css({"color": "#ffab00", "opacity": "1"})
+            $("#logo-Luxury").before($newSpanLogoN1)
+            $('.logo-N1').addClass('fade-in')
         }else if(-4*letterWidth < x && x <= -3*letterWidth) {
-            $("#logo-S").css({"color": "#ffab00", "opacity": "1"})
+            $("#logo-Luxury").before($newSpanLogoS)
+            $(".logo-S").addClass('fade-in')
         }else if(-5*letterWidth < x && x <= -4*letterWidth) {
-            $("#logo-A").css({"color": "#ffab00", "opacity": "1"})
+            $("#logo-Luxury").before($newSpanLogoA)
+            $(".logo-A").css({"color": "#ffab00", "opacity": "1", 'transition': 'opacity 3s'})
         }else if(-6*letterWidth < x && x <= -5*letterWidth) {
-            $("#logo-N2").css({"color": "#ffab00", "opacity": "1"})
+            $("#logo-Luxury").before($newSpanLogoN2)
+            $(".logo-N2").css({"color": "#ffab00", "opacity": "1"})
         }else if(x <= -6*letterWidth) {
-            $("#logo-E").css({"color": "#ffab00", "opacity": "1"})
+            $("#logo-Luxury").before($newSpanLogoE)
+            $(".logo-E").css({"color": "#ffab00", "opacity": "1"})
             stopTextColor()
         }
     }
@@ -137,10 +147,8 @@ $(document).ready(function() {
 //  }
 //})
     
-    console.log(-window.screen.width)
     letterWidth = measureLetterWidth(elInsane, 6)
     elLuxuryWidth = elLuxury.scrollWidth
-    console.log(elLuxuryWidth)
     changeColor()
     
     $('#sliding-insane').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(e) { $(this).remove(); })

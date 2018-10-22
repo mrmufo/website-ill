@@ -71,6 +71,11 @@ html {
     li a:active {
         border-bottom: 1px solid #ffab00;
     }
+    
+    .brand-logo {
+            font-family: 'Petit Formal Script', cursive;
+//            font-weight: 100;
+    }
 }
 
 .expand {
@@ -100,23 +105,36 @@ html {
   width: 100%;
 }
 
-.brand-logo {
-    font-weight: 100;
-}
+//.brand-logo {
+//    font-weight: 100;
+//}
 
 .sliding {
     font-family: 'Source Code Pro', 'Arial', monospace;
 }
-#logo-I, #logo-N1, #logo-S, #logo-A, #logo-N2, #logo-E {
-    opacity: 0;
-    transition: opacity 3s;
+.logo-I {
+    opacity: 1;
+    color: #fff;
 }
+.logo-N1, .logo-S, .logo-A, .logo-N2, .logo-E {
+    opacity: 0;
+//    -webkit-transition: opacity 3s;
+//    transition: opacity 3s;
+}
+
+.fade-in {
+    color: #ffab00;
+    opacity: 1;
+//    Fix transition - doesn't work
+//    transition: opacity 3s;
+}
+
 header {
     background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.8)), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
     height: 100vh;
     background-size: cover;
     background-attachment: fixed;
-    overflow:hidden;
+//    overflow:hidden;
 
     #sliding-insane {     
         h1 {
