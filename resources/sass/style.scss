@@ -74,7 +74,16 @@ html {
     
     .brand-logo {
             font-family: 'Petit Formal Script', cursive;
+            margin-left: 66px;
 //            font-weight: 100;
+            
+            .moveLeft{
+                position: absolute;
+            }
+            
+            .logo-uxury {
+                opacity: 0;
+            }
     }
 }
 
@@ -126,7 +135,8 @@ html {
     color: #ffab00;
     opacity: 1;
 //    Fix transition - doesn't work
-//    transition: opacity 3s;
+    transition: opacity 3s;
+    transform: translateX()
 }
 
 header {
