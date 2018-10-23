@@ -31,10 +31,6 @@ html {
 /* -------------------------------------------- */
 /* ----------------- HEADER ------------------- */
 /* -------------------------------------------- */
-/*
-.nav-bg-gradient {
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 22%, rgba(75,75,75,0) 102%, rgba(0, 0, 0, 1) 100%);
-}*/
 .main-nav li a:link,
 .main-nav li a:visited {
   color: #fff;
@@ -74,7 +70,7 @@ html {
   font-family: 'Source Code Pro', 'Arial', monospace; }
 
 .logo-I {
-  opacity: 1;
+  margin-left: -22px;
   color: #fff; }
 
 .logo-N1, .logo-S, .logo-A, .logo-N2, .logo-E {
@@ -85,10 +81,7 @@ html {
   opacity: 1;
   -webkit-transition: opacity 3s;
   -o-transition: opacity 3s;
-  transition: opacity 3s;
-  -webkit-transform: translateX();
-  -ms-transform: translateX();
-  transform: translateX(); }
+  transition: opacity 3s; }
 
 header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.8))), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);

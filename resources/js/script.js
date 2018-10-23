@@ -32,10 +32,6 @@ $(document).ready(function() {
     var $newSpanLogoA = $("<span class='logo-A'>a</span>")
     var $newSpanLogoN2 = $("<span class='logo-N2'>n</span>")
     var $newSpanLogoE = $("<span class='logo-E'>e</span>")
-//    var shake_start = {
-//                "opacity": "1",
-//                "transform": "translateX(-luxuryWidth)"
-//    }
 
 /* -------------- NAVIGATION BAR -------------- */
     var navbar = $('#navbar')[0]
@@ -75,53 +71,19 @@ $(document).ready(function() {
             $(".moveLeft").css({"transform": "translateX(-106px)", 'transition': 'transform 13s'})
             $("#logo-slash").css({"opacity": "0", 'transition': 'opacity 5s'})
         }else if(-3*letterWidth < x && x <= -2*letterWidth) {
-//            $("#logo-waypoint").before($newSpanLogoN1)
             $('.logo-N1').addClass('fade-in')
         }else if(-4*letterWidth < x && x <= -3*letterWidth) {
-//            $("#logo-waypoint").before($newSpanLogoS)
-            $(".logo-S").addClass('fade-in')
-//            $(".moveLeft").css({"transform": "translateX(-33px)", 'transition': 'transform 1s'})
+            $('.logo-S').addClass('fade-in')
         }else if(-5*letterWidth < x && x <= -4*letterWidth) {
-//            $("#logo-waypoint").before($newSpanLogoA)
-            $(".logo-A").addClass('fade-in')
-//            $(".moveLeft").css({"transform": "translateX(-58px)", 'transition': 'transform 1s'})
+            $('.logo-A').addClass('fade-in')
         }else if(-6*letterWidth < x && x <= -5*letterWidth) {
-//            $("#logo-waypoint").before($newSpanLogoN2)
-            $(".logo-N2").addClass('fade-in')
-//            $(".moveLeft").css({"transform": "translateX(-81px)", 'transition': 'transform 1s'})
+            $('.logo-N2').addClass('fade-in')
         }else if(x <= -6*letterWidth) {
-//            $("#logo-waypoint").before($newSpanLogoE)
-            $(".logo-E").addClass('fade-in')
-            $(".logo-uxury").css({"opacity": "1", 'transition': 'opacity 3s'})
-//            $(".moveLeft").css({"transform": "translateX(-106px)", 'transition': 'transform 1s'})
+            $('.logo-E').addClass('fade-in')
+            $('.logo-uxury').css({"opacity": '1', 'transition': 'opacity 3s'})
             stopTextColor()
         }
     }
-/* ----------------------First idea of logo---------------------- */
-//    function getValues(){
-//        var matrix = $('#sliding-insane').css('transform').replace(/[^0-  9\-.,]/g, '').split(',')
-//        var x = matrix[4]
-//        if(-2*letterWidth < x && x <= -letterWidth) {
-//            $(".logo-I").css({"color": "#ffab00", 'transition': 'color 3s'})
-//        }else if(-3*letterWidth < x && x <= -2*letterWidth) {
-//            $("#logo-Luxury").before($newSpanLogoN1)
-//            $('.logo-N1').addClass('fade-in')
-//        }else if(-4*letterWidth < x && x <= -3*letterWidth) {
-//            $("#logo-Luxury").before($newSpanLogoS)
-//            $(".logo-S").addClass('fade-in')
-//        }else if(-5*letterWidth < x && x <= -4*letterWidth) {
-//            $("#logo-Luxury").before($newSpanLogoA)
-//            $(".logo-A").css({"color": "#ffab00", "opacity": "1", 'transition': 'opacity 3s'})
-//        }else if(-6*letterWidth < x && x <= -5*letterWidth) {
-//            $("#logo-Luxury").before($newSpanLogoN2)
-//            $(".logo-N2").css({"color": "#ffab00", "opacity": "1"})
-//        }else if(x <= -6*letterWidth) {
-//            $("#logo-Luxury").before($newSpanLogoE)
-//            $(".logo-E").css({"color": "#ffab00", "opacity": "1"})
-//            stopTextColor()
-//        }
-//    }
-/* -------------------------------------------- */
     
     function stopTextColor() {
         clearInterval(intervalID)
@@ -160,24 +122,6 @@ $(document).ready(function() {
         timingFunction: 'linear'
     })
 /* -------------------------------------------- */
-   
-///* For sticky navigation */
-//    $('.js--section-sliding-text').waypoint(function(direction) {
-//        if (direction == "down") {
-//            $('main-nav').addClass('sticky');
-//        } else {
-//            $('main-nav').removeClass('sticky');           
-//        }   
-//    }, {
-//        offset: '60px'
-//    });
-    
-//    var waypoint = new Waypoint({
-//  element: document.getElementById('waypoint'),
-//  handler: function(direction) {
-//    console.log('Scrolled to waypoint!')
-//  }
-//})
     
     letterWidth = measureLetterWidth(elInsane, 6)
     elLuxuryWidth = elLuxury.scrollWidth
