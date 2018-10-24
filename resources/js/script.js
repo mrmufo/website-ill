@@ -53,19 +53,22 @@ $(document).ready(function() {
             }
         }
 });
-/* -------------------------------------------- */
-
+    
+/* -------------- ANIMATED LOGO -------------- */
     function measureLetterWidth(element, letters) {
         return element.scrollWidth/letters
     }
     
-    function changeColor() {
-        intervalID = window.setInterval(getValues, 100)
+    // Runs specific function with set interval time
+    function functionInterval(fName, interval) {
+        intervalID = window.setInterval(fName, interval)
     }
     
-    function getValues(){
+    function checkHPosition() {
         var matrix = $('#sliding-insane').css('transform').replace(/[^0-9\-.,]/g, '').split(',')
-        var x = matrix[4]
+        var x = matrix[4] //Stores X axis displacement of element
+
+        //Checks if each letter moved outside the viewport
         if(-2*letterWidth < x && x <= -letterWidth) {
             $(".logo-I").css({"color": "#ffab00", 'transition': 'color 3s'})
             $(".moveLeft").css({"transform": "translateX(-106px)", 'transition': 'transform 13s'})
@@ -81,12 +84,12 @@ $(document).ready(function() {
         }else if(x <= -6*letterWidth) {
             $('.logo-E').addClass('fade-in')
             $('.logo-uxury').css({"opacity": '1', 'transition': 'opacity 3s'})
-            stopTextColor()
+            stopInterval(intervalID)
         }
     }
     
-    function stopTextColor() {
-        clearInterval(intervalID)
+    function stopInterval(interval) {
+        clearInterval(interval)
     }
     
 /* ---------------- KEYFRAMES ----------------- */
@@ -117,6 +120,7 @@ $(document).ready(function() {
     })
     $(luxury).playKeyframe({
         name: "slidein-luxury",
+        delay: "3s",
         duration: "60s",
         iterationCount: 'infinite',
         timingFunction: 'linear'
@@ -125,7 +129,7 @@ $(document).ready(function() {
     
     letterWidth = measureLetterWidth(elInsane, 6)
     elLuxuryWidth = elLuxury.scrollWidth
-    changeColor()
+    functionInterval(checkHPosition, 100)
     
     $('#sliding-insane').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(e) { $(this).remove(); })
 });

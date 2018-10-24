@@ -82,9 +82,10 @@ html {
 }
 
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .sliding {
@@ -113,9 +114,9 @@ header {
     background-attachment: fixed;
 //    overflow:hidden;
 
-    #sliding-insane {     
+    #sliding-insane {   
+        z-index: -1;
         h1 {
-            z-index: -1;
             top: -100px;
             margin: 0;
             left: 50px;
@@ -127,8 +128,8 @@ header {
     
     #sliding-luxury {
 // Napis LUXURY opada ze scrollem na dół, przy końcu sekcji opacity=0 i pojawia się ciemno-złoty w miejscu logo
+        z-index: -1;
         h1 {
-            z-index: 0;
             top: -100px;
             margin: 0;
             left: 100%;

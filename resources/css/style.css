@@ -62,6 +62,7 @@ html {
   transition: background-color 0.25s; }
 
 .sticky {
+  z-index: 1;
   position: fixed;
   top: 0;
   width: 100%; }
@@ -91,22 +92,24 @@ header {
   height: 100vh;
   background-size: cover;
   background-attachment: fixed; }
-  header #sliding-insane h1 {
-    z-index: -1;
-    top: -100px;
-    margin: 0;
-    left: 50px;
-    position: absolute;
-    font-size: 4000%;
-    color: rgba(255, 171, 0, 0.26); }
-  header #sliding-luxury h1 {
-    z-index: 0;
-    top: -100px;
-    margin: 0;
-    left: 100%;
-    position: absolute;
-    font-size: 4000%;
-    color: rgba(255, 171, 0, 0.26); }
+  header #sliding-insane {
+    z-index: -1; }
+    header #sliding-insane h1 {
+      top: -100px;
+      margin: 0;
+      left: 50px;
+      position: absolute;
+      font-size: 4000%;
+      color: rgba(255, 171, 0, 0.26); }
+  header #sliding-luxury {
+    z-index: -1; }
+    header #sliding-luxury h1 {
+      top: -100px;
+      margin: 0;
+      left: 100%;
+      position: absolute;
+      font-size: 4000%;
+      color: rgba(255, 171, 0, 0.26); }
 
 .celeb-photo img {
   width: 420px;
