@@ -77,8 +77,15 @@ html {
 
 .expand {
     z-index: 1;
-    background-color: black;
-    transition: background-color 0.25s;
+    background-color: rgba(16, 16, 16, 0.77);
+    font-size: 90%;
+    transition: background-color 1s, font-size 1s;
+}
+
+.on-scroll-logo {
+    z-index: 1;
+    font-size: 10%;
+    transition: font-size 1s;
 }
 
 .sticky {
@@ -88,9 +95,7 @@ html {
     width: 100%;
 }
 
-.sliding {
-    font-family: 'Source Code Pro', 'Arial', monospace;
-}
+
 
 .logo-I {
     margin-left: -22px;
@@ -113,33 +118,31 @@ header {
     background-size: cover;
     background-attachment: fixed;
 //    overflow:hidden;
-
-    #sliding-insane {   
-        z-index: -1;
-        h1 {
-            top: -100px;
-            margin: 0;
-            left: 50px;
-            position: absolute;
-            font-size: 4000%;
-            color: rgba(255, 171, 0, 0.26);
-        }
-    }
     
-    #sliding-luxury {
-// Napis LUXURY opada ze scrollem na dół, przy końcu sekcji opacity=0 i pojawia się ciemno-złoty w miejscu logo
+    .sliding {
         z-index: -1;
+        
         h1 {
-            top: -100px;
-            margin: 0;
-            left: 100%;
-            position: absolute;
-            font-size: 4000%;
-            color: rgba(255, 171, 0, 0.26);
+                font-family: 'Source Code Pro', 'Arial', monospace;
+                font-size: 4000%;
+                top: -100px;
+                margin: 0;
+                position: absolute;
+                color: rgba(255, 171, 0, 0.26);
         }
         
-        &:after {
-            
+        .sliding-insane {
+            h1 {
+                left: 50px;
+            }
+        }
+
+        .sliding-luxury {
+// Napis LUXURY opada ze scrollem na dół, przy końcu sekcji opacity=0 i pojawia się ciemno-złoty w miejscu logo
+            h1 {
+                left: 100%;
+            }
+            &:after {}
         }
     }
 }

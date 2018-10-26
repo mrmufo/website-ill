@@ -25,8 +25,8 @@ $(document).ready(function() {
     var intervalID, letterWidth, elLuxuryWidth, elInsaneWidth
     var elInsane = $('#js-insane')[0]
     var elLuxury = $('#js-luxury')[0]
-    var insane = $('#sliding-insane')[0]
-    var luxury = $('#sliding-luxury')[0]
+    var insane = $('.sliding-insane')[0]
+    var luxury = $('.sliding-luxury')[0]
     var $newSpanLogoN1 = $("<span class='logo-N1'>n</span>")
     var $newSpanLogoS = $("<span class='logo-S'>s</span>")
     var $newSpanLogoA = $("<span class='logo-A'>a</span>")
@@ -43,14 +43,20 @@ $(document).ready(function() {
         } else {
             $('#navbar').removeClass('sticky');
         }
-        if ($(this).scrollTop() > 200) {
+        if ($(this).scrollTop() > 1) {
             if (!$('#navbar').hasClass('expand')) {
                 $('#navbar').addClass('expand');
             }
+//            if (!$('.moveLeft').hasClass('on-scroll-logo')) {
+//                $('.moveLeft').addClass('on-scroll-logo');
+//            }
         } else {
             if ($('#navbar').hasClass('expand')) {
                 $('#navbar').removeClass('expand');
             }
+//            if ($('.moveLeft').hasClass('on-scroll-logo')) {
+//                $('.moveLeft').removeClass('on-scroll-logo');
+//            }
         }
 });
     
@@ -65,7 +71,7 @@ $(document).ready(function() {
     }
     
     function checkHPosition() {
-        var matrix = $('#sliding-insane').css('transform').replace(/[^0-9\-.,]/g, '').split(',')
+        var matrix = $('.sliding-insane').css('transform').replace(/[^0-9\-.,]/g, '').split(',')
         var x = matrix[4] //Stores X axis displacement of element
 
         //Checks if each letter moved outside the viewport
@@ -131,5 +137,5 @@ $(document).ready(function() {
     elLuxuryWidth = elLuxury.scrollWidth
     functionInterval(checkHPosition, 100)
     
-    $('#sliding-insane').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(e) { $(this).remove(); })
+    $('.sliding-insane').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function(e) { $(this).remove(); })
 });
