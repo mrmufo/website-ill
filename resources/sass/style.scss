@@ -62,16 +62,18 @@ html {
     }
     
     .brand-logo {
-            font-family: 'Petit Formal Script', cursive;
-            margin-left: 66px;
-            
-            .moveLeft{
-                position: absolute;
-            }
-            
-            .logo-uxury {
-                opacity: 0;
-            }
+        text-align: center;
+        font-family: 'Petit Formal Script', cursive;
+
+        .moveLeft{
+            position: absolute;
+        }
+
+        .logo-uxury {
+            position: absolute;
+            left: 41.015px;
+            opacity: 0;
+        }
     }
 }
 
@@ -121,7 +123,6 @@ header {
     
     .sliding {
         z-index: -1;
-        
         h1 {
                 font-family: 'Source Code Pro', 'Arial', monospace;
                 font-size: 4000%;

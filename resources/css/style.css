@@ -47,11 +47,13 @@ html {
   border-bottom: 1px solid #ffab00; }
 
 .main-nav .brand-logo {
-  font-family: 'Petit Formal Script', cursive;
-  margin-left: 66px; }
+  text-align: center;
+  font-family: 'Petit Formal Script', cursive; }
   .main-nav .brand-logo .moveLeft {
     position: absolute; }
   .main-nav .brand-logo .logo-uxury {
+    position: absolute;
+    left: 41.015px;
     opacity: 0; }
 
 .expand {
