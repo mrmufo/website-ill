@@ -46,6 +46,8 @@ html {
 /* ----------------- HEADER ------------------- */
 /* -------------------------------------------- */
 .main-nav {
+    z-index: 1;
+
     li a:link,
     li a:visited {
         color: #fff;
@@ -74,6 +76,10 @@ html {
             left: 41.015px;
             opacity: 0;
         }
+    }
+    
+    form {
+        height: 64px;
     }
 }
 
@@ -146,6 +152,11 @@ header {
             &:after {}
         }
     }
+}
+
+nav {
+    height: 100%;
+    position: absolute;
 }
 
 // ZOPTYMALIZOWAC
