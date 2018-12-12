@@ -31,6 +31,25 @@ html {
 /* -------------------------------------------- */
 /* ----------------- HEADER ------------------- */
 /* -------------------------------------------- */
+header {
+  max-width: 1900px;
+  height: 100%;
+  z-index: -1; }
+  header h1 {
+    font-family: 'Source Code Pro', 'Arial', monospace;
+    font-size: 3000%;
+    margin: 0;
+    position: absolute;
+    color: rgba(255, 171, 0, 0.26); }
+  header .sliding-insane h1 {
+    top: -130px;
+    left: 100%; }
+  header .sliding-luxury h1 {
+    left: 100%; }
+
+/* -------------------------------------------- */
+/* --------------- NAVIGATION ----------------- */
+/* -------------------------------------------- */
 .main-nav {
   z-index: 1; }
   .main-nav li a:link,
@@ -95,28 +114,44 @@ html {
   -o-transition: opacity 3s;
   transition: opacity 3s; }
 
-header {
+.first-screen {
   background-color: black;
   height: 100vh;
   background-size: cover;
   background-attachment: fixed; }
-  header .sliding {
-    z-index: -1; }
-    header .sliding h1 {
+  .first-screen .sliding {
+    height: 100%;
+    z-index: -1;
+    border: 5px solid red; }
+    .first-screen .sliding h1 {
       font-family: 'Source Code Pro', 'Arial', monospace;
-      font-size: 4000%;
-      top: -100px;
+      font-size: 3000%;
       margin: 0;
       position: absolute;
       color: rgba(255, 171, 0, 0.26); }
-    header .sliding .sliding-insane h1 {
-      left: 50px; }
-    header .sliding .sliding-luxury h1 {
+    .first-screen .sliding .sliding-insane h1 {
+      top: -130px;
+      left: 100%; }
+    .first-screen .sliding .sliding-luxury h1 {
       left: 100%; }
 
 nav {
-  height: 100%;
+  top: auto;
+  bottom: auto;
   position: absolute; }
+
+.vcenter-parent {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .celeb-photo img {
   width: 420px;
