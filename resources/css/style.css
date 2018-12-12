@@ -55,6 +55,8 @@ html {
       position: absolute;
       left: 41.015px;
       opacity: 0; }
+    .main-nav .brand-logo img {
+      height: 64px; }
   .main-nav form {
     height: 64px; }
 
@@ -94,10 +96,7 @@ html {
   transition: opacity 3s; }
 
 header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0.8))), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
-  background-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
-  background-image: -o-linear-gradient(black, rgba(0, 0, 0, 0.8)), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
-  background-image: linear-gradient(black, rgba(0, 0, 0, 0.8)), url(https://timedotcom.files.wordpress.com/2014/11/henry-graves-watch.jpg);
+  background-color: black;
   height: 100vh;
   background-size: cover;
   background-attachment: fixed; }
