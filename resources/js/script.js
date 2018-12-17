@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         indicators: true
     })
 })
+
 $(document).ready(function() {
     $.keyframe.debug = true
 //    let dupa = '123'
@@ -37,6 +38,15 @@ $(document).ready(function() {
     var navbar = $('#navbar')[0]
     var sticky = $('#navbar').offset().top;
     
+    $("#inpt_search").on('focus', function () {
+        $(this).parent('label').addClass('active');
+    });
+    
+    $("#inpt_search").on('blur', function () {
+        if($(this).val().length == 0)
+            $(this).parent('label').removeClass('active');
+    });
+
     $(window).on('scroll', function () {
         if ($(this).scrollTop() >= sticky) {
             $('#navbar').addClass('sticky');
